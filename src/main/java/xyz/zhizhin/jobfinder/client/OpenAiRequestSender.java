@@ -2,7 +2,6 @@ package xyz.zhizhin.jobfinder.client;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RestController;
 import xyz.zhizhin.jobfinder.model.HeadHunterUser;
 import xyz.zhizhin.jobfinder.model.HeadHunterVacancy;
@@ -21,7 +20,7 @@ public class OpenAiRequestSender {
 
     public String prepareResponseLetter(HeadHunterVacancyResponse vacancyResponse,
                                         HeadHunterVacancy vacancy,
-                                        HeadHunterUser headHunterUser) throws IOException {
+                                        HeadHunterUser headHunterUser) {
         StringBuilder responce = new StringBuilder(chatClient.prompt().user(buildResponseQuestion(vacancyResponse, vacancy, headHunterUser)).call().content());
         return responce.append("\n").append(headHunterUser.getAdditionalText()).append("\n").append(DISCLAIMER).append("\n").toString();
     }
@@ -34,7 +33,7 @@ public class OpenAiRequestSender {
         response.append(headHunterUser.getName()).append(" ")
                 .append(headHunterUser.getMiddleName()).append(" ")
                 .append(headHunterUser.getSurname()).append(", ")
-                .append(headHunterUser.getSex()).append(", ")
+                .append(headHunterUser.getGender()).append(", ")
                 .append(headHunterUser.getAge()).append(" лет. Опыт: ")
                 .append(headHunterUser.getExpirience())
                 .append(" лет")

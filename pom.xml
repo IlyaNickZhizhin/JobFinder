@@ -33,6 +33,8 @@
         <lombook>1.18.32</lombook>
         <okHttp>4.9.0</okHttp>
         <postgres>42.6.0</postgres>
+        <telegrambots-client>7.7.1</telegrambots-client>
+        <telegrambots-abilities>7.7.1</telegrambots-abilities>
     </properties>
     <dependencies>
         <dependency>
@@ -75,6 +77,21 @@
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
             <version>${okHttp}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.telegram</groupId>
+            <artifactId>telegrambots-client</artifactId>
+            <version>${telegrambots-client}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.telegram</groupId>
+            <artifactId>telegrambots-abilities</artifactId>
+            <version>${telegrambots-abilities}</version>
+        </dependency>
+        <dependency>
+            <groupId>xyz.zhizhin</groupId>
+            <artifactId>JobFinder</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
     <dependencyManagement>

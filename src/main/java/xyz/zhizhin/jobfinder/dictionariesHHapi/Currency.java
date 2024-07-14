@@ -1,9 +1,11 @@
 package xyz.zhizhin.jobfinder.dictionariesHHapi;
 
+import lombok.Getter;
+
+@Getter
 public enum Currency {
     AZN("AZN", "Манаты"),
     BYR("BYR", "Белорусские рубли"),
-    EUR("EUR", "Евро"),
     GEL("GEL", "Грузинский лари"),
     KGS("KGS", "Киргизский сом"),
     KZT("KZT", "Тенге"),
@@ -18,14 +20,6 @@ public enum Currency {
     Currency(String code, String name) {
         this.code = code;
         this.name = name;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public String getName() {
-        return name;
     }
 }
 

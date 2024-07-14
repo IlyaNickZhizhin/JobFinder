@@ -2,12 +2,8 @@ package xyz.zhizhin.jobfinder.config;
 
 import okhttp3.OkHttpClient;
 import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.ai.openai.api.OpenAiApi;
-import org.springframework.ai.openai.api.common.OpenAiApiClientErrorException;
-import org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.server.WebHandler;
 
 @Configuration
 public class Config {

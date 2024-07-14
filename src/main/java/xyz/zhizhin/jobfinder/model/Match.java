@@ -2,7 +2,6 @@ package xyz.zhizhin.jobfinder.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.springframework.boot.autoconfigure.batch.BatchProperties;
 
 @Entity(name = "matches")
 @Data

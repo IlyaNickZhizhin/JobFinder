@@ -1,17 +1,19 @@
 spring:
   application:
     name: JobFinder
-  datasource:
-    username: seeker
-    password: ${secret.datasource.password}
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/jobs
   config:
     import: classpath:secret.yaml
+  datasource:
+    username: seeker
+    password: ${datasource.password}
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/jobs
   jpa:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+  liquibase:
+    enabled: false
   ai:
     chat:
       client:
@@ -21,3 +23,7 @@ spring:
       chat:
         options:
           model: gpt-3.5-turbo-1106
+  telegram-bot:
+    name: ${telegram-bot.name}
+    token: ${telegram-bot.token}
+    creatorId: ${telegram-bot.creatorId}

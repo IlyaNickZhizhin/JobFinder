@@ -10,10 +10,8 @@ import java.util.Set;
 public class HeadHunterUser {
 
     @Id
-    private Long id;
-
     @Column(name = "telegramId")
-    private Long telegramId;
+    private Long Id;
 
     @Column(name = "telegramName")
     private String telegramName;
@@ -27,8 +25,8 @@ public class HeadHunterUser {
     @Column(name = "middleName")
     private String middleName;
 
-    @Column(name = "sex")
-    private String sex;
+    @Column(name = "gender")
+    private String gender;
 
     @Column
     private int age;

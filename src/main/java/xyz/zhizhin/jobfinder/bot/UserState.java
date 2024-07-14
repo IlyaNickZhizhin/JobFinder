@@ -1,0 +1,15 @@
+package xyz.zhizhin.jobfinder.bot;
+
+public enum UserState {
+    ASKING_NAME,
+    ASKING_SURNAME,
+    ASKING_MIDDLE_NAME,
+    ASKING_GENDER,
+    ASKING_AGE,
+    ASKING_ADDITIONAL_TEXT,
+    ASKING_EXPERIENCE,
+    ASKING_SET_SKILLS,
+    ASKING_FIND_STRATEGY,
+    ASKING_CHECK,
+    CARD_ID
+}
